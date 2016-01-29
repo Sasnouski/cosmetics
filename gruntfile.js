@@ -1,8 +1,7 @@
-
+'use strict';
 
 module.exports = function(grunt) {
-    var app_files = ['script.js', 'book.js'],
-        output = 'build/scripts.js';
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         wiredep: {
@@ -11,15 +10,49 @@ module.exports = function(grunt) {
             }
         },
         watch: {
-            javascript: {
-                files: ['<%= concat.javascript.src %>'],
-                tasks: ['concat', 'uglify']
+            //watching for bower to add script tags
+            bower: {
+                files: ['bower.json'],
+                tasks: ['wiredep']
+            },
+            css: {
+                files: ['public/css/*.less'],
+                tasks: ['less:dev']
+            }
+
+        },
+        browserSync: {
+            livereload: {
+                options: {
+                    files: [
+                        'public/*.html',
+                        'public/css/*.less',
+                        'public/images/{,*/}*',
+                        'public/scripts/{,*/}*.js'
+                    ],
+                    port: 3000,
+                    server: {
+                        baseDir: ['public']
+                    }
+                }
+            }
+        },
+        open: {
+            server: {
+                path: 'http://localhost:<%= browserSync.livereload.options.port %>'
+            }
+        },
+        less: {
+            dev: {
+                files: {
+                    'public/css/main.css': 'public/css/main.less'
+                }
             }
         },
         concat: {
             javascript:{
-                src: app_files,
-                dest: output
+                src: [],
+                dest: "build/scripts.js"
             }
         },
         uglify:{
@@ -30,9 +63,18 @@ module.exports = function(grunt) {
             }
         }
     });
-    grunt.loadNpmTasks('grunt-wiredep');
-    grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.registerTask('default', ['concat', 'uglify', 'watch']);
+    require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+    //grunt.loadNpmTasks('grunt-wiredep');
+    //grunt.loadNpmTasks('grunt-contrib-concat');
+    //grunt.loadNpmTasks('grunt-contrib-uglify');
+    //grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.registerTask('serve', function(target){
+        grunt.task.run([
+            'wiredep',
+            'open',
+            'less:dev',
+            'browserSync:livereload',
+            'watch'
+        ]);
+    });
 };
