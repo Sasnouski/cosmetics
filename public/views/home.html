@@ -1,0 +1,9 @@
+
+<h1>Home page</h1>
+<div ng-repeat="article in articles">
+  <article>
+    <h2>{{article.title}}</h2>
+    <img ng-src="{{article.img}}" class="img-responsive img-thumbnail">
+    <p>{{article.text}}</p>
+  </article>
+</div>
