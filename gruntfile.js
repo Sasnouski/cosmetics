@@ -17,7 +17,7 @@ module.exports = function(grunt) {
             },
             css: {
                 files: ['public/css/*.less'],
-                tasks: ['less:dev']
+                tasks: ['less']
             }
 
         },
@@ -27,19 +27,16 @@ module.exports = function(grunt) {
                     files: [
                         'public/*.html',
                         'public/css/*.less',
+                        'public/css/*.css',
                         'public/images/{,*/}*',
                         'public/scripts/{,*/}*.js'
                     ],
                     port: 3000,
+                    watchTask: true,
                     server: {
                         baseDir: ['public']
                     }
                 }
-            }
-        },
-        open: {
-            server: {
-                path: 'http://localhost:<%= browserSync.livereload.options.port %>'
             }
         },
         less: {
@@ -50,15 +47,21 @@ module.exports = function(grunt) {
             }
         },
         concat: {
-            javascript:{
-                src: [],
-                dest: "build/scripts.js"
+            options: {
+                separator: ';'
+            },
+            dist: {
+                src: ['src/**/*.js'],
+                dest: 'build/scripts.js'
             }
         },
-        uglify:{
-            javascript: {
+        uglify: {
+            options: {
+                banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
+            },
+            dist: {
                 files: {
-                    'build/scripts.min.js': '<%= concat.javascript.dest %>'
+                    'build/scripts.min.js': ['<%= concat.dist.dest %>']
                 }
             }
         }
@@ -68,13 +71,17 @@ module.exports = function(grunt) {
     //grunt.loadNpmTasks('grunt-contrib-concat');
     //grunt.loadNpmTasks('grunt-contrib-uglify');
     //grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.registerTask('serve', function(target){
-        grunt.task.run([
+    grunt.registerTask('serve',
+        [
             'wiredep',
-            'open',
-            'less:dev',
+            'less',
             'browserSync:livereload',
             'watch'
         ]);
-    });
+    grunt.registerTask('pack',
+        [
+            'concat',
+            'uglify'
+        ]);
+
 };
