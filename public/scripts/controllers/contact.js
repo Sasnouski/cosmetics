@@ -5,8 +5,8 @@ angular.module('cosmetics')
 
     $scope.save = function() {
       $scope.$broadcast('show-errors-check-validity');
-      //if ($scope.feedback.$invalid) { return; }
-      // code to add the user
+      if ($scope.feedback.$invalid) { return; }
+      
     };
 
 

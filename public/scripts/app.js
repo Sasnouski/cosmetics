@@ -4,7 +4,8 @@ angular.module('cosmetics', [
   'ngAnimate',
   'ngCookies',
   'ngResource',
-  'ngRoute'
+  'ngRoute',
+  'mgcrea.ngStrap.modal'
 ])
   .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
     $routeProvider

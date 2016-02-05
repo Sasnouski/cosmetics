@@ -1,11 +1,15 @@
 <div id="catalog">
   <h1>Catalog page</h1>
   <hr>
+  <button type="button" class="btn btn-lg btn-danger" ng-click="showModal()" data-animation="am-fade-and-slide-top" data-placement="center"  >Custom Modal
+    <br>
+    <small>(using data-template)</small>
+  </button>
   <div class="row">
     <div ng-repeat="item in list">
       <div class="col-sm-3">
         <div class="thumbnail">
-          <img ng-src="{{item.img}}" alt="..." class="img-responsive img-thumbnail">
+          <img ng-src="{{item.img}}" alt="..." class="img-responsive img-thumbnail" ng-click="showModal(item)">
           <p>{{article.text}}</p>
           <div class="caption">
             <h3>{{item.name}}</h3>
