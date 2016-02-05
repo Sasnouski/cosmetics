@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('cosmetics').
-  directive('showErrors', function() {
+  directive('showErrors',[ function() {
     return {
       restrict: 'A',
       require:  '^form',
@@ -14,15 +14,15 @@ angular.module('cosmetics').
         });
         inputNgEl.bind('blur', function() {
           el.toggleClass('show-success', formCtrl[inputName].$valid);
+          if(formCtrl.userWebsite.$pristine){
+            el.removeClass('show-success');
+          }
         });
         scope.$on('show-errors-check-validity', function() {
           el.toggleClass('has-error', formCtrl[inputName].$invalid);
         });
-        scope.$on('reset', function() {
-            el.removeClass('has-error');
-            el.removeClass('show-success');
-        });
+
       }
     }
-  });
+  }]);
 

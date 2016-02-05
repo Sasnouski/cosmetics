@@ -8,57 +8,81 @@
 /*--- Header---*/
 .header {
   color: @header;
+  .navbar{
+    margin: 0;
+  }
 }
+.header-panel{
+  height: 200px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f8f8f8+0,f5f5f5+100 */
+  background: rgb(248,248,248); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(248,248,248,1) 0%, rgba(245,245,245,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(248,248,248,1) 0%,rgba(245,245,245,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(248,248,248,1) 0%,rgba(245,245,245,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#f5f5f5',GradientType=0 ); /* IE6-9 */
 
+}
 /*--- /Header---*/
 
 /*--- Body---*/
 .content {
   max-width: 1100px;
   margin: 0 auto;
-  margin-top: -20px;
   padding: 10px;
   background-color: @container;
   border-left: 1px solid lightgrey;
   border-right: 1px solid lightgrey;
+
+  nav{
+    text-align: center;
+  }
 }
-.content nav{
-  text-align: center;
-}
+
   /* home */
-.content article{
-  padding: 10px;
-  margin: 0;
-  border-bottom: 1px solid lightgrey;
-  img{
-    float: left;
-    margin-right: 10px;
-    margin-bottom: 10px;
+  #home article{
+    padding: 10px;
+    margin: 0;
+    border-bottom: 1px solid lightgrey;
+    z-index: 5;
+
+    img{
+      float: left;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+    hr{
+      margin-top: 5px;
+    }
   }
-  hr{
-    margin-top: 5px;
-  }
-}
   /* /home */
 
   /* catalog */
+  #catalog{
+
+  }
   /* /catalog */
 
   /* about */
+  #about{
+
+  }
   /* /about */
 
   /* contact */
-  form{
+
+  #contact form{
     margin: auto;
     width: 50%;
     padding: 15px;
-    button{
-      //width:10%;
+
+    .group{
+      float: left;
+      width: 100%;
       margin-left: 15px;
     }
-    //.ng-invalid{
-    //  border: 1px solid red;
-    //}
+    button{
+      margin-left: 15px;
+    }
     .show-success .form-control {
       border-color: lightgreen;
     }
@@ -69,11 +93,7 @@
       display: block;
     }
   }
-  .group{
-    float: left;
-    width: 100%;
-    margin-left: 15px;
-  }
+
   /* /contact */
 
 /*--- /Body---*/
@@ -82,6 +102,13 @@
 footer{
   margin-top: -12px;
   height: 300px;
-  background-color: @header;
+  z-index: 3;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f5f5f5+0,a9a9a9+100 */
+  background: rgb(245,245,245); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(245,245,245,1) 0%, rgba(169,169,169,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(245,245,245,1) 0%,rgba(169,169,169,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(245,245,245,1) 0%,rgba(169,169,169,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#a9a9a9',GradientType=0 ); /* IE6-9 */
+  border-top: 1px solid lightgrey;
 }
 /*--- /Footer---*/
