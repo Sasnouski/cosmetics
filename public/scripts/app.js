@@ -5,28 +5,37 @@ angular.module('cosmetics', [
   'ngCookies',
   'ngResource',
   'ngRoute',
-  'mgcrea.ngStrap.modal'
+  'filters',
+  'ui.bootstrap'
 ])
   .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
     $routeProvider
-      .when('/', {
-        templateUrl: '../views/home.html',
+      .when('/home', {
+        templateUrl: '../views/home/home.html',
         controller: 'HomeCtrl'
       })
+      .when('/home/:postID', {
+        templateUrl: '../views/home/post.html',
+        controller: 'PostCtrl'
+      })
       .when('/catalog', {
-        templateUrl: '../views/catalog.html',
+        templateUrl: '../views/catalog/catalog.html',
         controller: 'CatalogCtrl'
       })
+      .when('/catalog/:productID', {
+        templateUrl:'../views/catalog/product.html',
+        controller:'ProductCtrl'
+      })
       .when('/contact', {
-        templateUrl: '../views/contact.html',
+        templateUrl: '../views/contact/contact.html',
         controller: 'ContactCtrl'
       })
       .when('/about', {
-        templateUrl: '../views/about.html',
+        templateUrl: '../views/about/about.html',
         controller: 'AboutCtrl'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/home'
       });
     $locationProvider.html5Mode({
       enabled: false,

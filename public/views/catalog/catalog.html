@@ -1,0 +1,40 @@
+<div id="catalog">
+  <h1>Catalog page</h1>
+  <hr>
+  <button type="button" class="btn btn-lg " ng-click="showFilterForm()">
+    Filter <span class="glyphicon glyphicon-menu-right"></span>
+  </button>
+  <div class="filterForm" ng-class="{'active':isdisplay}" >
+    <label>Name: <input type="text" ng-model="searchBy.name"></label> <br>
+    <label>Category:
+      <select ng-model="searchBy.rating">
+        <option value="-1">-1</option>
+        <option value="-0.5">-0.5</option>
+        <option value="0">0</option>
+        <option value="0.5">0.5</option>
+        <option value="1">1</option>
+        <option value="1.5">1.5</option>
+        <option value="2">2</option>
+        <option value="2.5">2.5</option>
+        <option value="3">3</option>
+        <option value="3.5">3.5</option>
+        <option value="4">4</option>
+        <option value="4.5">4.5</option>
+        <option value="5">5</option>
+      </select></label> <br>
+    <label>Price:</label><label>from:<input type="text" ng-model="range.minPrice"></label><label>to:<input type="text" ng-model="range.maxPrice"></label> <br>
+  </div>
+  <div class="row">
+    <div ng-repeat="item in list | filter:searchBy.rating ">
+      <div class="cont col-md-3 ">
+        <h4>{{item.itemTitle}}</h4>
+          <a ng-href="#/catalog/{{item.itemTitle}}"><img ng-src="{{item.itemThumbImgUrl}}"  class="img-responsive" ></a>
+          <p>{{item.shortDescr}}</p>
+          <a href="#/catalog/{{item.itemTitle}}" class="detail btn btn-default" role="button">Details</a>
+      </div>
+    </div>
+  </div>
+<div class="paginator">
+  <uib-pagination  ng-model="currentPage" ng-change="numPages()" items-per-page="numPerPage" total-items="totalItems" max-size="maxSize"></uib-pagination>
+</div>
+</div>

@@ -14,7 +14,7 @@ angular.module('cosmetics').
         });
         inputNgEl.bind('blur', function() {
           el.toggleClass('show-success', formCtrl[inputName].$valid);
-          if(formCtrl.userWebsite.$pristine){
+          if(el.children()[1].name == 'userWebsite' && el.children()[1].value == ''){
             el.removeClass('show-success');
           }
         });

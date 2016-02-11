@@ -1,0 +1,17 @@
+<div id="home">
+  <h1>Home page</h1>
+  <hr>
+  <div ng-repeat="article in articles">
+    <div >
+      <article  class="row">
+        <h2>{{article.title}}</h2>
+        <a ng-href="#/home/{{article.title}}"><img ng-src="{{article.img}}" class="img-responsive"></a>
+        <p>{{article.text}}</p>
+         <a href="#/home/{{article.title}}" class="btn btn-default" role="button">Details</a>
+      </article>
+    </div>
+  </div>
+  <div class="paginator">
+    <uib-pagination  ng-model="currentPage" ng-change="numPages()" items-per-page="numPerPage" total-items="totalItems"></uib-pagination>
+  </div>
+</div>

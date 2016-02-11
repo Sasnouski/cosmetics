@@ -1,0 +1,43 @@
+
+[
+  {
+    "name": "first",
+    "category": "one",
+    "descr": "first description",
+    "img": "images/Smiley.png",
+    "fullDescr": "There are many variations of passages of Lorem Ipsum available",
+    "price": 5
+  },
+  {
+    "name": "second",
+    "category": "one",
+    "descr": "second description",
+    "img": "images/Smiley.png",
+    "fullDescr": "There are many variations of passages of Lorem Ipsum available",
+    "price": 6
+  },
+  {
+    "name": "third",
+    "category": "two",
+    "descr": "third description",
+    "img": "images/Smiley.png",
+    "fullDescr": "There are many variations of passages of Lorem Ipsum available",
+    "price": 5
+  },
+  {
+    "name": "fourth",
+    "category": "one",
+    "descr": "fourth description",
+    "img": "images/Smiley.png",
+    "fullDescr": "There are many variations of passages of Lorem Ipsum available",
+    "price": 8
+  },
+  {
+    "name": "fifth",
+    "category": "two",
+    "descr": "fifth description",
+    "img": "images/Smiley.png",
+    "fullDescr": "There are many variations of passages of Lorem Ipsum available",
+    "price": 13
+  }
+]
