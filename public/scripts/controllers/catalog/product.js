@@ -1,18 +1,13 @@
 'use strict';
 
 angular.module('cosmetics')
-  .controller('ProductCtrl', ['$scope', '$http', '$location', '$routeParams', function ($scope, $http, $location, $routeParams) {
+  .controller('ProductCtrl', ['$scope', 'phones', '$log', '$routeParams', function ($scope, phones, $log, $routeParams) {
     var productId = $routeParams.productID;
-    $scope.product = {};
-    $http.get('/json/phones.json')
-      .success(function(data){
-        $scope.products = data;
-        for(var i=0; i<data.length; i++){
-          if (data[i].itemTitle === productId) {
-            $scope.product =  data[i];
-          }
-        }
-      });
-
+    $scope.products = phones.getData();
+    for(var i=0; i<$scope.products.length; i++){
+      if ($scope.products[i].itemTitle === productId) {
+        $scope.product =  $scope.products[i];
+      }
+    }
 
   }]);

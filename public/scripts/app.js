@@ -20,11 +20,21 @@ angular.module('cosmetics', [
       })
       .when('/catalog', {
         templateUrl: '../views/catalog/catalog.html',
-        controller: 'CatalogCtrl'
+        controller: 'CatalogCtrl',
+        resolve: {
+          'ServiceData': function (phones) {
+            return phones.promise;
+          }
+        }
       })
       .when('/catalog/:productID', {
         templateUrl:'../views/catalog/product.html',
-        controller:'ProductCtrl'
+        controller:'ProductCtrl',
+        resolve: {
+          'ServiceData': function (phones) {
+            return phones.promise;
+          }
+        }
       })
       .when('/contact', {
         templateUrl: '../views/contact/contact.html',
