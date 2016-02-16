@@ -44,8 +44,10 @@
     margin: 0;
     border-bottom: 1px solid lightgrey;
     z-index: 5;
+    position: relative;
 
     img{
+      max-height: 300px;
       float: left;
       margin-right: 10px;
       margin-bottom: 10px;
@@ -53,11 +55,16 @@
     hr{
       margin-top: 5px;
     }
+    .detail{
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+    }
   }
   #post{
     img{
-
       margin: 0 15px 15px 0;
+      max-height: 600px;
     }
   }
   /* /home */
@@ -84,10 +91,12 @@
       padding: 0;
     }
     .cont{
+      border: 1px solid white;
       text-align: center;
       height: 350px;
       border-radius: 5px;
       img{
+        max-height: 150px;
         margin: auto;
         margin-bottom: 10px;
       }
@@ -98,13 +107,51 @@
       }
     }
   }
+
+  /* /catalog */
+
+  /* product */
+.carousel {
+  margin-top: 20px;
+}
+.item .thumb {
+  max-height: 100px;
+  cursor: pointer;
+  float: left;
+}
+.item .thumb img {
+  max-height: 100px;
+  margin: 2px;
+}
+.item img {
+  max-height: 100px;
+}
   #item{
     padding: 10px;
+    .fullImage{
+      margin: 0 auto;
+    }
+    .backLink{
+      margin-bottom: 15px;
+    }
+    ul{
+      list-style-type: none;
+      padding: 15px;
+      display: block;
+      font-size: 18px;
+    }
+    .imgContainer{
+      .galleryThumbs{
+        max-height: 100px;
+        margin: 10px;
+      }
+    }
 
   }
 
+  /* /product */
 
-  /* /catalog */
+
 
   /* about */
   #about{

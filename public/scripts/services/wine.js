@@ -1,8 +1,8 @@
 'use strict';
 
-angular.module('cosmetics').service('phones', function($http) {
+angular.module('cosmetics').service('wine', function($http) {
   var data = null;
-  var promise = $http.get('/json/phones.json').success(function(result){
+  var promise = $http.get('/json/data.json').success(function(result){
     data = result;
   });
   return {

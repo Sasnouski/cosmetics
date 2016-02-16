@@ -1,14 +1,14 @@
 'use strict';
 
 angular.module('cosmetics')
-  .controller('CatalogCtrl', ['$scope','$log','$filter','phones', function ($scope, $log, $filter, phones) {
+  .controller('CatalogCtrl', ['$scope','$log','$filter','wine', function ($scope, $log, $filter, wine) {
 
-    $scope.phonesCollection = phones.getData();
+    $scope.phonesCollection = wine.getData();
 
     // Pagination
     $scope.filteredPhonesCollection = [];
     $scope.maxSize = 10;
-    $scope.numPerPage = 8;
+    $scope.numPerPage = 4;
     $scope.currentPage = 1;
     $scope.setPages =  function() {
       var begin = (($scope.currentPage - 1) * $scope.numPerPage),
@@ -24,10 +24,10 @@ angular.module('cosmetics')
     });
 
     // Filters
-    $scope.$watchGroup(['searchBy.itemTitle', 'orderBy.rating', 'orderBy.price'],function(one){
-      $scope.filteredPhonesCollection = $filter('filter')($scope.phonesCollection, { itemTitle: one[0] });
+    $scope.$watchGroup(['searchBy.itemTitle', 'orderBy.rating', 'orderBy.price'],function(one  ){
+      $scope.filteredPhonesCollection = $filter('filter')($scope.phonesCollection, { name: one[0] });
       $scope.filteredPhonesCollection = (one[1] == true) ? $filter('orderBy')($scope.filteredPhonesCollection, 'rating') : $filter('orderBy')($scope.filteredPhonesCollection, '-rating');
-      $scope.filteredPhonesCollection = (one[2] == true) ? $filter('orderBy')($scope.filteredPhonesCollection, 'price.min') : $filter('orderBy')($scope.filteredPhonesCollection, '-price.min');
+      $scope.filteredPhonesCollection = (one[2] == true) ? $filter('orderBy')($scope.filteredPhonesCollection, 'price') : $filter('orderBy')($scope.filteredPhonesCollection, '-price');
       $scope.setPages();
       console.log(one)
     });

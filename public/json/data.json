@@ -1,43 +1,143 @@
 
 [
   {
-    "name": "first",
-    "category": "one",
-    "descr": "first description",
-    "img": "images/Smiley.png",
-    "fullDescr": "There are many variations of passages of Lorem Ipsum available",
-    "price": 5
+    "name": "Trius Cabernet Franc",
+    "date": "2014",
+    "volume": "750ml",
+    "thumbnail": "images/trius_cabernetfranc_2012/trius_cabernetfranc_2012.jpg",
+    "images":[],
+    "shortDescr": "Medium-bodied with flavours of juicy ripe currants and blackberry.",
+    "fullDescr": "A Niagara favourite! Medium-bodied with flavours of juicy ripe currants and blackberry.",
+    "price": 13.95,
+    "rating": 4
   },
   {
-    "name": "second",
-    "category": "one",
-    "descr": "second description",
-    "img": "images/Smiley.png",
-    "fullDescr": "There are many variations of passages of Lorem Ipsum available",
-    "price": 6
+    "name": "Peller Estates French Cross Shiraz",
+    "date": "",
+    "volume": "1.5L",
+    "thumbnail": "images/pe-fc-15l-shiraz/pe-fc-15l-shiraz.jpg",
+    "images":[
+      {
+        "imgUrl":"images/pe-fc-15l-shiraz/fc_tetra2014_shiraz.jpg"
+      },
+      {
+        "imgUrl":"images/pe-fc-15l-shiraz/pe-fc-4l-shiraz_1.jpg"
+      },
+      {
+        "imgUrl":"images/pe-fc-15l-shiraz/fc_tetra2014_shiraz.jpg"
+      },
+      {
+        "imgUrl":"images/pe-fc-15l-shiraz/pe-fc-4l-shiraz_1.jpg"
+      },{
+        "imgUrl":"images/pe-fc-15l-shiraz/fc_tetra2014_shiraz.jpg"
+      },
+      {
+        "imgUrl":"images/pe-fc-15l-shiraz/pe-fc-4l-shiraz_1.jpg"
+      },
+      {
+        "imgUrl":"images/pe-fc-15l-shiraz/fc_tetra2014_shiraz.jpg"
+      },
+      {
+        "imgUrl":"images/pe-fc-15l-shiraz/pe-fc-4l-shiraz_1.jpg"
+      }
+    ],
+    "shortDescr": "An easy drinking red wine for casual sipping or enjoy with medium flavoured foods.",
+    "fullDescr": "An easy drinking red wine for casual sipping or enjoy with medium flavoured foods. Flavours of plum, black currant and spice linger through on the finish.",
+    "price": 16.95,
+    "rating": 4.5
   },
   {
-    "name": "third",
-    "category": "two",
-    "descr": "third description",
-    "img": "images/Smiley.png",
-    "fullDescr": "There are many variations of passages of Lorem Ipsum available",
-    "price": 5
+    "name": "Peller Estates French Cross Chardonnay",
+    "date": "",
+    "volume": "1.5L",
+    "thumbnail": "images/pe-fc-15l-char_1/pe-fc-15l-char_1.jpg",
+    "images":[
+      {
+        "imgUrl":"images/pe-fc-15l-char_1/pe-fc-4l-chardonnay_1.jpg"
+      },
+      {
+        "imgUrl":"images/pe-fc-15l-char_1/fc_tetra2014_chard_2.jpg"
+      }
+    ],
+    "shortDescr": "A smooth, medium-bodied wine, well balanced between oak and apple fruit flavours.",
+    "fullDescr": "A smooth, medium-bodied wine, well balanced between oak and apple fruit flavours. The smooth mouth feel followed by refreshing acidity makes this wine an excellent food partner.",
+    "price": 15,
+    "rating": 4.1
   },
   {
-    "name": "fourth",
-    "category": "one",
-    "descr": "fourth description",
-    "img": "images/Smiley.png",
-    "fullDescr": "There are many variations of passages of Lorem Ipsum available",
-    "price": 8
+    "name": "Skinnygrape Rose",
+    "date": "",
+    "volume": "750mL",
+    "thumbnail": "images/sg-rose-750ml/sg-rose-750ml.jpg",
+    "images":[
+    ],
+    "shortDescr": "Light, fresh and fruity.",
+    "fullDescr": "Light, fresh and fruity. This refreshing medium dry rosé comes alive with flavours of red berry and Bartlett pear.",
+    "price": 11.95,
+    "rating": 3.8
   },
   {
-    "name": "fifth",
-    "category": "two",
-    "descr": "fifth description",
-    "img": "images/Smiley.png",
-    "fullDescr": "There are many variations of passages of Lorem Ipsum available",
-    "price": 13
+    "name": "Domaine D'Or Superieur Red",
+    "date": "",
+    "volume": "1.5L",
+    "thumbnail": "images/dd-superiorred-1.5l/dd-superiorred-1.5l.jpg",
+    "images":[
+    ],
+    "shortDescr": "Medium-bodied with rich aromas of ripe fruit and black cherries.",
+    "fullDescr": "Medium-bodied with rich aromas of ripe fruit and black cherries. Soft and well balanced through the finish.",
+    "price": 12.95,
+    "rating": 3.8
+  },
+  {
+    "name": "Black Cellar Malbec",
+    "date": "",
+    "volume": "750ml",
+    "thumbnail": "images/black-cellar_malbec/black-cellar_malbec.jpg",
+    "images":[
+    ],
+    "shortDescr": "Medium-bodied with rich aromas of ripe fruit and black cherries.",
+    "fullDescr": "Medium-bodied with rich aromas of ripe fruit and black cherries. Soft and well balanced through the finish.",
+    "price": 10.95,
+    "rating": 4
+  },
+  {
+    "name": "Peller Estates French Cross Sparkling Pinot Grigio",
+    "date": "",
+    "volume": "750ml",
+    "thumbnail": "images/pe-fc-sparklingpinotgrigio-750ml/pe-fc-sparklingpinotgrigio-750ml.jpg",
+    "images":[
+    ],
+    "shortDescr": "An aromatic sparkler with aromas of fresh tropical fruit and citrus notes.",
+    "fullDescr": "An aromatic sparkler with aromas of fresh tropical fruit and citrus notes, highlighted by crisp grapefruit. enjoy with salty appetizers, hors d'oeuvres, and creamy cheeses. Excellent with frilled and poached fish, baked chicken sushi or your favourite punch.",
+    "price": 9.95,
+    "rating": 3.2
+  },
+  {
+    "name": "Trius Vidal Icewine",
+    "date": "2013",
+    "volume": "375ml",
+    "thumbnail": "images/TR_Vidal_Icewine/TR_Vidal_Icewine.png",
+    "images":[
+    ],
+    "shortDescr": "A rich, luscious wine with perfectly sweet explosions of tropical fruit.",
+    "fullDescr": "Niagara's purest luxury! A rich, luscious wine with perfectly sweet explosions of tropical fruit.",
+    "price": 54.10,
+    "rating": 5
+  },
+  {
+    "name": "Peller Estates Family Series Riesling",
+    "date": "",
+    "volume": "750mL",
+    "thumbnail": "images/fs-riesling-2013-750ml/fs-riesling-2013-750ml.png",
+    "images":[
+      {
+        "imgUrl":"images/fs-riesling-2013-750ml/pf_riesling_15l_1.jpg"
+      }
+    ],
+    "shortDescr": "A fabulous sipping wine that finishes with refreshing notes of citrus.",
+    "fullDescr": "Light, fresh and fruity. A fabulous sipping wine that finishes with refreshing notes of citrus.",
+    "price": 18.95,
+    "rating": 4.1
   }
+
 ]

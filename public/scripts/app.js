@@ -22,8 +22,8 @@ angular.module('cosmetics', [
         templateUrl: '../views/catalog/catalog.html',
         controller: 'CatalogCtrl',
         resolve: {
-          'ServiceData': function (phones) {
-            return phones.promise;
+          'ServiceData': function (wine) {
+            return wine.promise;
           }
         }
       })
@@ -31,8 +31,8 @@ angular.module('cosmetics', [
         templateUrl:'../views/catalog/product.html',
         controller:'ProductCtrl',
         resolve: {
-          'ServiceData': function (phones) {
-            return phones.promise;
+          'ServiceData': function (wine) {
+            return wine.promise;
           }
         }
       })

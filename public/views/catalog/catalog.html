@@ -12,12 +12,12 @@
   <div class="row">
     <div ng-repeat="item in list">
       <div class="cont col-md-3 ">
-        <h4>{{item.itemTitle}}</h4>
-          <a ng-href="#/catalog/{{item.itemTitle}}"><img ng-src="{{item.itemThumbImgUrl}}"  class="img-responsive" ></a>
+        <h4>{{item.name}} {{item.date}}</h4>
+          <a ng-href="#/catalog/{{item.name}}"><img ng-src="{{item.thumbnail}}"  class="img-responsive" ></a>
           <p>{{item.shortDescr}}</p>
+          <p>{{item.price | currency}} / {{item.volume}}</p>
           <p>Rating: {{item.rating}}</p>
-          <p>Price: {{item.price.min}}</p>
-          <a href="#/catalog/{{item.itemTitle}}" class="detail btn btn-default" role="button">Details</a>
+          <a href="#/catalog/{{item.name}}" class="detail btn btn-default" role="button">Details</a>
       </div>
     </div>
   </div>

@@ -2,12 +2,12 @@
   <h1>Home page</h1>
   <hr>
   <div ng-repeat="article in articles">
-    <div >
-      <article  class="row">
+    <div>
+      <article class="row">
         <h2>{{article.title}}</h2>
-        <a ng-href="#/home/{{article.title}}"><img ng-src="{{article.img}}" class="img-responsive"></a>
+        <a ng-href="#/home/{{article.title}}"><img ng-src="{{article.img}}" class="img-responsive img-thumbnail"></a>
         <p>{{article.text}}</p>
-         <a href="#/home/{{article.title}}" class="btn btn-default" role="button">Details</a>
+        <a href="#/home/{{article.title}}" class="detail btn btn-default" role="button">Details</a>
       </article>
     </div>
   </div>
