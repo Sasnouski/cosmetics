@@ -66,6 +66,12 @@
       margin: 0 15px 15px 0;
       max-height: 600px;
     }
+    .backLink{
+      font-size: 16px;
+    }
+    h3{
+      margin-top: 15px;
+    }
   }
   /* /home */
 
@@ -91,14 +97,24 @@
       padding: 0;
     }
     .cont{
-      border: 1px solid white;
       text-align: center;
       height: 350px;
       border-radius: 5px;
+      padding-right: 5px;
+      padding-left: 5px;
+      .innerCol{
+        height: 350px;
+        background-color: white;
+        border: 1px solid #f8f8f8;
+        border-radius: 10px;
+        padding: 5px;
+      }
       img{
+
         max-height: 150px;
         margin: auto;
         margin-bottom: 10px;
+
       }
       .detail{
         position: absolute;
@@ -111,21 +127,7 @@
   /* /catalog */
 
   /* product */
-.carousel {
-  margin-top: 20px;
-}
-.item .thumb {
-  max-height: 100px;
-  cursor: pointer;
-  float: left;
-}
-.item .thumb img {
-  max-height: 100px;
-  margin: 2px;
-}
-.item img {
-  max-height: 100px;
-}
+
   #item{
     padding: 10px;
     .fullImage{
@@ -140,13 +142,41 @@
       display: block;
       font-size: 18px;
     }
-    .imgContainer{
-      .galleryThumbs{
-        max-height: 100px;
-        margin: 10px;
+    .backLink{
+      font-size: 16px;
+    }
+  }
+  #slider{
+
+    .sliderMainImg{
+      img{
+        display: block;
+        margin: 0 auto;
+
       }
     }
+    .thumbCollection{
+      margin: 10px;
 
+      .thumbItems{
+      }
+      .thumbItem{
+        margin: 2px;
+        border: 1px solid lightgray;
+        border-radius: 5px;
+        background-color: white;
+        float:left;
+        max-height: 100px;
+        width: 100px;
+        cursor: pointer;
+
+        img{
+          display: block;
+          margin: 0 auto;
+          max-height: 100px;
+        }
+      }
+    }
   }
 
   /* /product */

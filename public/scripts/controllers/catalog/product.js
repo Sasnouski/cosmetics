@@ -9,5 +9,9 @@ angular.module('cosmetics')
         $scope.product =  $scope.products[i];
       }
     }
+    $scope.change = function(image){
+      $scope.product.thumbnail = image.imgUrl;
+      
+    }
 
   }]);

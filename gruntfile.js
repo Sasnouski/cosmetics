@@ -26,7 +26,7 @@ module.exports = function (grunt) {
         options: {
           files: [
             'public/*.html',
-            'public/views/*.html',
+            'public/views/*/*.html',
             'public/css/*.less',
             'public/css/*.css',
             'public/images/{,*/}*',

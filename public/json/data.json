@@ -5,7 +5,11 @@
     "date": "2014",
     "volume": "750ml",
     "thumbnail": "images/trius_cabernetfranc_2012/trius_cabernetfranc_2012.jpg",
-    "images":[],
+    "images":[
+      {
+        "imgUrl":"images/trius_cabernetfranc_2012/trius_cabernetfranc_2012.jpg"
+      }
+    ],
     "shortDescr": "Medium-bodied with flavours of juicy ripe currants and blackberry.",
     "fullDescr": "A Niagara favourite! Medium-bodied with flavours of juicy ripe currants and blackberry.",
     "price": 13.95,
@@ -18,7 +22,7 @@
     "thumbnail": "images/pe-fc-15l-shiraz/pe-fc-15l-shiraz.jpg",
     "images":[
       {
-        "imgUrl":"images/pe-fc-15l-shiraz/fc_tetra2014_shiraz.jpg"
+        "imgUrl":"images/pe-fc-15l-shiraz/pe-fc-15l-shiraz.jpg"
       },
       {
         "imgUrl":"images/pe-fc-15l-shiraz/pe-fc-4l-shiraz_1.jpg"
@@ -28,7 +32,8 @@
       },
       {
         "imgUrl":"images/pe-fc-15l-shiraz/pe-fc-4l-shiraz_1.jpg"
-      },{
+      },
+      {
         "imgUrl":"images/pe-fc-15l-shiraz/fc_tetra2014_shiraz.jpg"
       },
       {
@@ -53,6 +58,9 @@
     "thumbnail": "images/pe-fc-15l-char_1/pe-fc-15l-char_1.jpg",
     "images":[
       {
+        "imgUrl":"images/pe-fc-15l-char_1/pe-fc-15l-char_1.jpg"
+      },
+      {
         "imgUrl":"images/pe-fc-15l-char_1/pe-fc-4l-chardonnay_1.jpg"
       },
       {
@@ -70,6 +78,9 @@
     "volume": "750mL",
     "thumbnail": "images/sg-rose-750ml/sg-rose-750ml.jpg",
     "images":[
+      {
+        "imgUrl":"images/sg-rose-750ml/sg-rose-750ml.jpg"
+      }
     ],
     "shortDescr": "Light, fresh and fruity.",
     "fullDescr": "Light, fresh and fruity. This refreshing medium dry rosé comes alive with flavours of red berry and Bartlett pear.",
@@ -82,6 +93,9 @@
     "volume": "1.5L",
     "thumbnail": "images/dd-superiorred-1.5l/dd-superiorred-1.5l.jpg",
     "images":[
+      {
+        "imgUrl":"images/dd-superiorred-1.5l/dd-superiorred-1.5l.jpg"
+      }
     ],
     "shortDescr": "Medium-bodied with rich aromas of ripe fruit and black cherries.",
     "fullDescr": "Medium-bodied with rich aromas of ripe fruit and black cherries. Soft and well balanced through the finish.",
@@ -94,6 +108,9 @@
     "volume": "750ml",
     "thumbnail": "images/black-cellar_malbec/black-cellar_malbec.jpg",
     "images":[
+      {
+        "imgUrl":"images/black-cellar_malbec/black-cellar_malbec.jpg"
+      }
     ],
     "shortDescr": "Medium-bodied with rich aromas of ripe fruit and black cherries.",
     "fullDescr": "Medium-bodied with rich aromas of ripe fruit and black cherries. Soft and well balanced through the finish.",
@@ -106,6 +123,9 @@
     "volume": "750ml",
     "thumbnail": "images/pe-fc-sparklingpinotgrigio-750ml/pe-fc-sparklingpinotgrigio-750ml.jpg",
     "images":[
+      {
+        "imgUrl":"images/pe-fc-sparklingpinotgrigio-750ml/pe-fc-sparklingpinotgrigio-750ml.jpg"
+      }
     ],
     "shortDescr": "An aromatic sparkler with aromas of fresh tropical fruit and citrus notes.",
     "fullDescr": "An aromatic sparkler with aromas of fresh tropical fruit and citrus notes, highlighted by crisp grapefruit. enjoy with salty appetizers, hors d'oeuvres, and creamy cheeses. Excellent with frilled and poached fish, baked chicken sushi or your favourite punch.",
@@ -118,6 +138,9 @@
     "volume": "375ml",
     "thumbnail": "images/TR_Vidal_Icewine/TR_Vidal_Icewine.png",
     "images":[
+      {
+        "imgUrl":"images/TR_Vidal_Icewine/TR_Vidal_Icewine.png"
+      }
     ],
     "shortDescr": "A rich, luscious wine with perfectly sweet explosions of tropical fruit.",
     "fullDescr": "Niagara's purest luxury! A rich, luscious wine with perfectly sweet explosions of tropical fruit.",
@@ -130,6 +153,9 @@
     "volume": "750mL",
     "thumbnail": "images/fs-riesling-2013-750ml/fs-riesling-2013-750ml.png",
     "images":[
+      {
+        "imgUrl":"images/fs-riesling-2013-750ml/fs-riesling-2013-750ml.png"
+      },
       {
         "imgUrl":"images/fs-riesling-2013-750ml/pf_riesling_15l_1.jpg"
       }

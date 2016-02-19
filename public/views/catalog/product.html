@@ -1,69 +1,23 @@
 <div id="item">
-  <a class="backLink" ng-href="#catalog"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>Return</a>
+  <a class="backLink" ng-href="#catalog"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Return</a>
   <h3>{{product.name}} {{product.date}}</h3>
   <hr>
   <div class="row">
     <div class="col-md-6">
-      <div id="carousel" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="item active">
-            <img ng-src="images/pe-fc-15l-shiraz/fc_tetra2014_shiraz.jpg">
-          </div>
-          <div class="item">
-            <img ng-src="images/pe-fc-15l-shiraz/pe-fc-4l-shiraz_1.jpg">
-          </div>
-          <div class="item">
-            <img ng-src="images/pe-fc-15l-shiraz/fc_tetra2014_shiraz.jpg">
-          </div>
-          <div class="item">
-            <img ng-src="images/pe-fc-15l-shiraz/pe-fc-4l-shiraz_1.jpg">
+      <div id="slider">
+        <div class="sliderMainImg">
+          <img ng-src="{{product.thumbnail}}">
+        </div>
+        <div class="thumbCollection">
+          <div class="thumbItems">
+            <div class="thumbItem" ng-repeat="image in product.images" ng-click="change(image)">
+              <img ng-src="{{image.imgUrl}}" class="img-thumbnail" >
+            </div>
           </div>
         </div>
-      </div>
-      <div class="clearfix">
-        <div id="thumbcarousel" class="carousel slide" data-interval="false">
-          <div class="carousel-inner">
-            <div class="item active">
-              <div data-target="#carousel" data-slide-to="0" class="thumb"><img src="images/pe-fc-15l-shiraz/fc_tetra2014_shiraz.jpg"></div>
-              <div data-target="#carousel" data-slide-to="1" class="thumb"><img src="images/pe-fc-15l-shiraz/pe-fc-4l-shiraz_1.jpg"></div>
-              <div data-target="#carousel" data-slide-to="2" class="thumb"><img src="images/pe-fc-15l-shiraz/fc_tetra2014_shiraz.jpg"></div>
-              <div data-target="#carousel" data-slide-to="3" class="thumb"><img src="images/pe-fc-15l-shiraz/pe-fc-4l-shiraz_1.jpg"></div>
-            </div><!-- /item -->
-            <div class="item">
-              <div data-target="#carousel" data-slide-to="4" class="thumb"><img src="images/pe-fc-15l-shiraz/fc_tetra2014_shiraz.jpg"></div>
-              <div data-target="#carousel" data-slide-to="5" class="thumb"><img src="images/pe-fc-15l-shiraz/pe-fc-4l-shiraz_1.jpg"></div>
-              <div data-target="#carousel" data-slide-to="6" class="thumb"><img src="images/pe-fc-15l-shiraz/fc_tetra2014_shiraz.jpg"></div>
-              <div data-target="#carousel" data-slide-to="7" class="thumb"><img src="images/pe-fc-15l-shiraz/pe-fc-4l-shiraz_1.jpg"></div>
-            </div><!-- /item -->
-          </div><!-- /carousel-inner -->
-          <a class="left carousel-control" href="#thumbcarousel" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-          </a>
-          <a class="right carousel-control" href="#thumbcarousel" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-          </a>
-        </div> <!-- /thumbcarousel -->
-      </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <!--<img ng-src="{{product.thumbnail}}" class="fullImage img-responsive">-->
-      <!--<div class="imgContainer">-->
-        <!--<img ng-repeat="image in product.images" ng-src="{{image.imgUrl}}" class="galleryThumbs">-->
-      <!--</div>-->
     </div>
 
+    </div>
     <div class="col-md-6">
       <ul>
         <li ng-if="product.date">Date of bottling: {{product.date}}</li>
@@ -73,7 +27,6 @@
       </ul>
       <p>{{product.fullDescr}}</p>
     </div>
-
   </div>
 
 </div>
