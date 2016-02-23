@@ -1,0 +1,16 @@
+
+<div id="adminPanel" class="row">
+  <div id="leftPanel" class="col-md-4">
+    <a class="posts" ng-href="#/admin/posts" ng-class="{ active: isActive('/admin/posts') }" >
+      Posts
+    </a>
+    <a class="products" ng-href="#/admin/products" ng-class="{ active: isActive('/admin/products') }" >
+      Products
+    </a>
+  </div>
+  <div id="contentPanel" class="col-md-8">
+    <div ng-include="changeTemplate()">
+
+    </div>
+  </div>
+</div>

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('cosmetics')
-  .controller('ProductCtrl', ['$scope', 'wine', '$log', '$routeParams', function ($scope, wine, $log, $routeParams) {
+  .controller('ProductCtrl', ['$scope', 'wine', '$routeParams', function ($scope, wine, $routeParams) {
     var productId = $routeParams.productID;
     $scope.products = wine.getData();
     for(var i=0; i<$scope.products.length; i++){

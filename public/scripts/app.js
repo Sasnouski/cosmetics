@@ -12,11 +12,21 @@ angular.module('cosmetics', [
     $routeProvider
       .when('/home', {
         templateUrl: '../views/home/home.html',
-        controller: 'HomeCtrl'
+        controller: 'HomeCtrl',
+        resolve: {
+          'ServiceData': function (posts) {
+            return posts.promise;
+          }
+        }
       })
       .when('/home/:postID', {
         templateUrl: '../views/home/post.html',
-        controller: 'PostCtrl'
+        controller: 'PostCtrl',
+        resolve: {
+          'ServiceData': function (posts) {
+            return posts.promise;
+          }
+        }
       })
       .when('/catalog', {
         templateUrl: '../views/catalog/catalog.html',
@@ -43,6 +53,18 @@ angular.module('cosmetics', [
       .when('/about', {
         templateUrl: '../views/about/about.html',
         controller: 'AboutCtrl'
+      })
+      .when('/admin', {
+        templateUrl: '../views/admin/admin.html',
+        controller: 'AdminCtrl'
+      })
+      .when('/admin/posts', {
+        templateUrl: '../views/admin/admin.html',
+        controller: 'AdminCtrl'
+      })
+      .when('/admin/products', {
+        templateUrl: '../views/admin/admin.html',
+        controller: 'AdminCtrl'
       })
       .otherwise({
         redirectTo: '/home'

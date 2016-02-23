@@ -1,10 +1,10 @@
 <div id="home">
-  <h1>Home page</h1>
+  <h2>Home page</h2>
   <hr>
   <div ng-repeat="article in articles">
     <div>
       <article class="row">
-        <h2>{{article.title}}</h2>
+        <h3>{{article.title}}</h3>
         <a ng-href="#/home/{{article.title}}"><img ng-src="{{article.img}}" class="img-responsive img-thumbnail"></a>
         <p>{{article.text}}</p>
         <a href="#/home/{{article.title}}" class="detail btn btn-default" role="button">Details</a>

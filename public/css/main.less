@@ -68,6 +68,7 @@
     }
     .backLink{
       font-size: 16px;
+
     }
     h3{
       margin-top: 15px;
@@ -104,8 +105,9 @@
       padding-left: 5px;
       .innerCol{
         height: 350px;
+        box-shadow: 0px 2px 5px lightgray;
         background-color: white;
-        border: 1px solid #f8f8f8;
+        border: 1px solid lightgray;
         border-radius: 10px;
         padding: 5px;
       }
@@ -144,6 +146,9 @@
     }
     .backLink{
       font-size: 16px;
+    }
+    .productInfo{
+      float: left;
     }
   }
   #slider{
@@ -224,7 +229,7 @@
 
 /*--- Footer---*/
 footer{
-  margin-top: -12px;
+  margin-top: -1px;
   height: 300px;
   z-index: 3;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f5f5f5+0,a9a9a9+100 */
@@ -236,6 +241,79 @@ footer{
   border-top: 1px solid lightgrey;
 }
 /*--- /Footer---*/
+
+/*--- Admin panel---*/
+#adminPanel{
+  margin: 0;
+  padding: 0;
+}
+#leftPanel{
+  background-color: lightgray;
+  text-align: center;
+  a{
+    cursor: pointer;
+    height: 50px;
+    width: 100%;
+    padding: 15px;
+    background-color: #28a4c9;
+    float: left;
+  }
+  a:hover{
+    background-color: white;
+    text-decoration: none;
+  }
+  a.active{
+    background-color: white;
+  }
+
+}
+#contentPanel{
+  background-color: white;
+  .productsList{
+    border: 1px solid lightgray;
+    margin-top: 5px;
+    h4{
+      text-align: center;
+    }
+    span{
+      cursor: pointer;
+      float: right;
+    }
+    p{
+      margin-left: 5px;
+    }
+    .productsListInnerContent{
+      img{
+        display: block;
+        margin: 0 auto;
+        height: 300px;
+      }
+      h4{
+        clear: both;
+        padding-top: 10px;
+      }
+      ul{
+        list-style: none;
+      }
+      button{
+        //float: right;
+        margin: 10px;
+      }
+      .innerContentThumbList{
+        img{
+          height: 100px;
+          float: left;
+          margin: 5px;
+        }
+      }
+
+    }
+
+  }
+}
+
+
+/*--- /Admin panel---*/
 
 
 /*====================================== Responsive ============================================*/

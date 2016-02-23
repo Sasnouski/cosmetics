@@ -1,0 +1,23 @@
+
+<div ng-controller="AdminProductsCtrl">
+  <div class="productsList" ng-repeat="product in products">
+    <h4>{{product.name}}<span class="glyphicon glyphicon-plus" ng-class="product.spanClass" ng-click="expand($index)"></span></h4>
+    <div class="productsListInnerContent" ng-show="product.isExpand">
+      <img ng-src="{{product.thumbnail}}">
+      <div class="innerContentThumbList" ng-repeat="image in product.images">
+        <img ng-src="{{image.imgUrl}}" class="img-thumbnail" >
+      </div>
+      <h4>Short description</h4>
+      <p>{{product.shortDescr}}</p>
+      <h4>Full description</h4>
+      <p>{{product.fullDescr}}</p>
+      <ul>
+        <li>Price - {{product.price}}</li>
+        <li>Volume - {{product.volume}}</li>
+        <li>Rating - {{product.rating}}</li>
+      </ul>
+      <button class="btn btn-default">Update</button>
+      <button class="btn btn-danger">Delete</button>
+    </div>
+  </div>
+</div>

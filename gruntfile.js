@@ -6,7 +6,7 @@ module.exports = function (grunt) {
     pkg: grunt.file.readJSON('package.json'),
     wiredep: {
       target: {
-        src: 'public/index.html'
+        src: 'admin/index.html'
       }
     },
     watch: {
