@@ -60,11 +60,30 @@ angular.module('cosmetics', [
       })
       .when('/admin/posts', {
         templateUrl: '../views/admin/admin.html',
-        controller: 'AdminCtrl'
+        controller: 'AdminCtrl',
+        resolve: {
+          'ServiceData': function (posts) {
+            return posts.promise;
+          }
+        }
       })
       .when('/admin/products', {
         templateUrl: '../views/admin/admin.html',
-        controller: 'AdminCtrl'
+        controller: 'AdminCtrl',
+        resolve: {
+          'ServiceData': function (wine) {
+            return wine.promise;
+          }
+        }
+      })
+      .when('/admin/posts/create', {
+        templateUrl: '../views/admin/postsCreate.html',
+        controller: 'AdminCtrl',
+        resolve: {
+          'ServiceData': function (posts) {
+            return posts.promise;
+          }
+        }
       })
       .otherwise({
         redirectTo: '/home'

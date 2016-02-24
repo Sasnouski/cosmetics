@@ -1,5 +1,4 @@
 
-<div ng-controller="AdminProductsCtrl">
   <div class="productsList" ng-repeat="product in products">
     <h4>{{product.name}}<span class="glyphicon glyphicon-plus" ng-class="product.spanClass" ng-click="expand($index)"></span></h4>
     <div class="productsListInnerContent" ng-show="product.isExpand">
@@ -20,4 +19,3 @@
       <button class="btn btn-danger">Delete</button>
     </div>
   </div>
-</div>

@@ -269,7 +269,12 @@ footer{
 }
 #contentPanel{
   background-color: white;
+  .create{
+    float: right;
+    margin: 10px;
+  }
   .productsList{
+    clear: both;
     border: 1px solid lightgray;
     margin-top: 5px;
     h4{
@@ -286,7 +291,7 @@ footer{
       img{
         display: block;
         margin: 0 auto;
-        height: 300px;
+        max-height: 300px;
       }
       h4{
         clear: both;
@@ -296,20 +301,27 @@ footer{
         list-style: none;
       }
       button{
-        //float: right;
         margin: 10px;
       }
       .innerContentThumbList{
         img{
-          height: 100px;
+          max-height: 100px;
           float: left;
           margin: 5px;
         }
       }
 
     }
-
   }
+  .postsList{
+    clear: both;
+    img{
+      max-height: 300px;
+    }
+  }
+}
+.postsCreate{
+
 }
 
 

@@ -18,9 +18,6 @@ angular.module('cosmetics')
       $scope.totalItems = $scope.postsCollection.length;
     });
 
-
-
-
   }]);
 
 

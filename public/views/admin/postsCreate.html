@@ -1,0 +1,25 @@
+
+<div class="postsCreate">
+  <a class="backLink" ng-href="#/admin/posts/"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Return</a>
+  <h3>New Post</h3>
+  <form ng-submit="create()" novalidate>
+    <div>
+      <label for="title">Title</label>
+      <div>
+        <input type="text" ng-model="title" id="title" class="form-control" placeholder="Title" required>
+      </div>
+    </div>
+    <div>
+      <label for="content">Content</label>
+      <div>
+        <textarea ng-model="text" id="content" class="form-control"  placeholder="Content"></textarea>
+      </div>
+    </div>
+    <div>
+      <input type="submit" class="btn btn-info">
+    </div>
+    <div ng-show="error">
+      <strong ng-bind="error"></strong>
+    </div>
+  </form>
+</div>
