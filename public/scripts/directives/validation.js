@@ -6,6 +6,10 @@ angular.module('cosmetics').
       restrict: 'A',
       require:  '^form',
       link: function(scope, el, attrs, formCtrl) {
+        var data = scope[attrs["form-group"]];
+        console.log(data)
+
+
         var inputEl   = el[0].querySelector("[name]");
         var inputNgEl = angular.element(inputEl);
         var inputName = inputNgEl.attr('name');
